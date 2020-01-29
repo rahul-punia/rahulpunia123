@@ -1,0 +1,20 @@
+{
+  "name": "Lecture-8",
+  "version": "1.0.0",
+  "main": "client2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon jsonServer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "description": ""
+}
