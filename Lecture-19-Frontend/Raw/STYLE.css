@@ -1,0 +1,229 @@
+/* basic resets */
+/* universal selector */
+*{
+    color:gray;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+    html{
+        font-size: 1rem;
+    }
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+    .showcase{
+        background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("./IMG/food.jpg");
+        height: 100vh;
+        background-size: 100vw;
+        background-position: centre;
+        text-transform: uppercase;
+    }
+       .text-box{
+           position: absolute;
+           top: 34vh;
+           left: 17vw;
+           font-size: 140%;
+           width: 42vw;
+       }
+       .main-heading{
+         color: white;
+         /* font-family: 'Roboto Slab', serif; */
+         line-height: 170%;
+       }
+     .nav-ul{
+         display: flex;
+         justify-content: flex-end;
+     }
+     .span-styler{
+         color: crimson;
+     }
+     .nav-links{
+         color: white;
+     }
+     .nav-li{
+         margin-right: 1rem;
+         padding-top: 1rem;
+         padding-bottom:0.8rem;
+         font-size: 110%;
+     }
+     .nav-li:hover {
+        border-bottom: 0.1rem solid #e74c3c;
+      }
+      .btn {
+          /* margin-top:5rem; */
+          display: inline-block;
+        color: white;
+        font-size: 65%;
+        padding: 0.8rem;
+        background-color: #e74c3c;
+        border-radius: 1.7rem;
+        border:0.2rem solid #e74c3c;
+        margin: 0.5rem;
+    }
+    .btn:hover{
+        transform: scale(1.2);
+    }
+    
+    .btn-empty{
+        background-color: transparent;
+        color: crimson;
+    }
+       .btn-empty:hover{
+        background-color: #e74c3c;
+        color: white;
+    } 
+    .btns-container{
+        margin-top: 1.3rem;
+    }
+    /* IMPORTANT */
+    section{
+        padding:4rem 5rem;
+      }
+  h2{
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 2rem;
+  }
+  h2::after{
+    content: "";
+    height: 0.2rem;
+    width: 10rem;
+    background-color: crimson;
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+  }
+  .feature-heading{
+    font-size: 160%;
+    margin-bottom: 1rem;
+    font-weight:300;
+  }
+
+  /* ICONS */
+  .icon{
+      display: block;
+      color: crimson;
+      font-size: 280%;
+      margin-bottom: 0.5rem;;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* FEATURE-SECTION */
+  
+  .container-parent{
+    display: flex;
+    text-align: center;
+}
+  .container{
+      margin-right: 1.5rem;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+      transition: transform 0.4s;
+  }
+  .feature-para{
+    font-size: 80%;
+    line-height: 50%;
+    text-align: justify;
+  }
+  .feature-heading{
+    font-size: 50%;
+  }
+      
+ .container:hover{
+    transform: scale(1.1);
+  }
+   
+
+
+/* Steps to Follow Section */
+  .STEPS{
+      background-color:rgb(240, 248, 255);
+  }
+  .steps-container{
+      display: flex;
+      /* background-color: aliceblue; */
+  }
+  .btns-circular{
+      display: inline;
+      margin: 5rem;
+  }
+  .btnss-container{
+      display: flex;
+  }
+  .btnss{
+    display: inline-block;
+    color:crimson;
+    font-size: 65%;
+    padding: 1.3rem;
+    border-radius: 50%;
+    border:0.2rem solid crimson;
+    margin: 1.5rem;
+    font-size: 2rem;
+    transition: transform 0.4s;
+  }
+  .btnss:hover{
+    transform: scale(1.1);
+  }
+  p{
+    margin-top: 2.5rem;
+  }
+  img{
+    display: inline-block;
+    margin-left: 5rem;
+    height: 35rem;
+    width: 20%;
+  }
+
+
+  /* Footer section */
+  .footer-text{
+      color: white;
+      font-size: 1.5rem;
+      background-color: black;
+      height: 12rem;
+  }
+  .upper{
+    display: flex;
+    text-align: end;
+}
+  .apps{
+      color: white;
+      margin: 1rem;
+  }
+  .ICONS{
+      margin-left: 26rem;
+  }
+  .foot-icon{
+    color: white;
+    text-align: right;
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+  .footer-heading{
+      color: white;
+      margin-left: 24rem;
+      /* margin-top: 0.2rem; */
+  }
+ 
+ 

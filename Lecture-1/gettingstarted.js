@@ -90,6 +90,7 @@ var fs=require("fs");
 //input
 console.log(process.argv);
 const dir=process.argv[2];
+
 //File system
 // if(dir==undefined){
 //     console.log("Kindly enter directory name");
@@ -103,6 +104,7 @@ const dir=process.argv[2];
 // fs.mkdirSync(dir);
 // console.log("Directory"+dir+" has been created");
 
+//multipleDirectory
 // for(var i=1;i<=50;i++){
 //   fs.mkdirSync(dir+i);
 // }

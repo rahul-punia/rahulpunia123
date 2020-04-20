@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title PugJS first page
+  body
+    h1 Heading through templating  
+    p.
+      multiple line text
+      It can have many lines.
+    p
+     |rfhsjhfjshfs
+     |jshdjhsadjha
+     |lksjdjasjdkad
+     |jhdhsadhjshd
+    h1#myid it is a myId h1
+    h1.myclass
+    #myId
+    .myclass 
+    a(href="www.google.com") Go to google
+    img(src="")
+    //-Java Script
+    -const classes=["color-primary","large","md-8"];
+    p(class=classes) 
+    -const products=["Iphone","Mac","Ipad","Note8"];
+    ul
+      for product in products
+        li
+          a(href="#")=product
+      else
+          li No products found    
+     
+
+
+
+  
