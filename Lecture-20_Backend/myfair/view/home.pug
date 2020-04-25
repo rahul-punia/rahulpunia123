@@ -1,0 +1,113 @@
+extend base.pug
+block header
+  include homenav.pug
+block content
+  section.features#features
+    h2.Features AWESOME FEATURES
+    .container-parent
+      .container
+        i.fas.fa-calendar-plus.icon
+        // <i class="icon"></i>
+        h.feature-heading 365 DAYS/YEAR
+        p.feature-para
+          | Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.
+      .container
+        i.fas.fa-truck.icon
+        // <i class="icon"></i>
+        h.feature-heading 30 MINUTES OR FREE
+        p.feature-para
+          | You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.
+      .container
+        i.fas.fa-carrot.icon
+        // <i class="icon"></i>
+        h.feature-heading 100% ORGANIC
+        p.feature-para
+          | All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
+  section.steps
+    h2 STEPS TO FOLLOW
+    .flex-container
+      .image-container
+        img.apps-img(src='img/Capture.png', alt='')
+      .steps-container
+        .steps-flex-container.clearfix
+          div 1
+          p.steps-para
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ea suscipit voluptate modi corrupti aliquam.
+        .steps-flex-container.clearfix
+          div 2
+          p.steps-para
+            | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas quod ipsa fugit inventore porro pariatur.
+        .steps-flex-container.clearfix
+          div 3
+          p.steps-para
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas aut, soluta laudantium reiciendis fugit quae!
+  .review#Review
+    section.reviews
+      h2 REVIEWS
+      .rflex-container
+        .review-container
+          h3 DAVID SMITH
+          p.review-para
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptas voluptatum adipisci quos temporibus, culpa explicabo tempore, odit nam odio ratione repellendus iste modi nostrum earum veritatis soluta, iusto enim!
+          p
+            i.fas.fa-star.icon-bar
+            i.fas.fa-star.icon-bar
+            i.fas.fa-star.icon-bar
+            i.fas.fa-star.icon-bar
+            i.fas.fa-star.icon-bar
+        .review-container
+          h3 JOHN CENA
+          p.review-para
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptas voluptatum adipisci quos temporibus, culpa explicabo tempore, odit nam odio ratione repellendus iste modi nostrum earum veritatis soluta, iusto enim!
+          i.fas.fa-star.icon-bar
+          i.fas.fa-star.icon-bar
+          i.fas.fa-star.icon-bar
+          i.fas.fa-star.icon-bar
+          i.fas.fa-star.icon-bar
+        .review-container
+          h3 VIRAT KOHLI
+          p.review-para
+            | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio facere quas quidem eaque similique, architecto, ipsum voluptates, rerum eligendi ut aut itaque? Quasi at pariatur molestiae error possimus placeat nostrum!
+          i.fas.fa-star.icon-bar
+          i.fas.fa-star.icon-bar
+          i.fas.fa-star.icon-bar
+          i.fas.fa-star.icon-bar
+          i.fas.fa-star.icon-bar
+  include plansPage.pug
+  section.signup
+    h2 CONTACT US
+    .signup-container
+      .video-container
+        video.bg-video(autoplay='', muted='', loop='')
+          source(src='Avocado.mp4', type='video/mp4')
+          |         Autoplay is not supported
+      .signup-form
+        form(action='')
+          .entry-container
+            label(for='name') Name
+            input#name(type='text', placeholder='Your Name')
+          .entry-container
+            label(for='Email') Email
+            input#Email(type='email', placeholder='Your Email')
+          .entry-container
+            label(for='Options') How did you find us
+            select#Options(name='')
+              option(value='friends') friends
+              option(value='search') search
+              option(value='advertisement') advertisement
+              option(value='other') other
+          .entry-container
+            label(for='feedback') Drop us a line
+            textarea(name='feedback', id='', cols='30', rows='10')
+          .entry-container-checkbox
+            input#checkbox(type='checkbox')
+            p I have read and agree with all the Privacy Policy and Terms Conditions
+            // <label for="checkbox">I have read and agree with all the Privacy Policy and Terms Conditions</label>
+          button.btn.btn-full(type='submit') submit
+
+
+
+
+
+
+

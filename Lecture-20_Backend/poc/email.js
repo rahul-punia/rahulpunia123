@@ -4,31 +4,38 @@ async function sendEmail(){
 // emailconfiguration=>transport
 try{
     const transport=nodemailer.createTransport({
-        host: "smtp.mailtrap.io",
-        port: 2525,
+        service:"gmail",
+        host: "smtp.gmail.com",
+        secure: false,
         auth: {
-          user: "4c403701c6202a",
-          pass: "67fa189be6b233"
+          user: "rahulpunia1011@gmail.com",
+          pass: "occqshrmeddwhlqh"
         }
+        // host: "smtp.mailtrap.io",
+        // port: 2525,
+        // auth: {
+        //   user: "4c403701c6202a",
+        //   pass: "67fa189be6b233"
+        // }
     })
     
-    // eamil options
+    // email options
     const emailOptions={
-        from:"rahulpunia1010@gmail.com",
-        to:"abc@gmail.com",
+        from:"abc@gmail.com",
+        to:"puniaakshay30@gmail.com",
         subject:"My first Email",
-        text:"I am testing email",
-        html:"<h1>I am testing email</h1>"
+        text:"Your Order one full paneeer and four nan.I am testing email",
+        html:"<h1>Hi Akshay Your Order one full paneeer and four nans.I am testing email</h1>"
     }
     
     // send email
-    
     await transport.sendMail(emailOptions);
     }catch(err){
         console.log(err);
     }
 }
 
+//call function
 sendEmail().then(function(){
     console.log("email has been sended")
 }).catch(function(err){
