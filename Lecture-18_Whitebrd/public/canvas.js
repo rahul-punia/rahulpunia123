@@ -49,6 +49,8 @@ board.addEventListener("mouseup", function (e) {
     // ctx.closePath();
     socket.emit("mymouseup");
 })
+
+
 const undo=document.getElementById("undo-tool");
 let interval=null;
 undo.addEventListener("mousedown",function(e){

@@ -43,6 +43,10 @@ role:{
     enum:["admin","user","restaurantowner","deliveryboy"],
     default:"user"
 },
+profileImage:{
+  type:String,
+  default:"/img/users/default.jpeg"
+},
 resetToken:String,
 resetTokenExpires:Date
 });
@@ -69,6 +73,6 @@ userSchema.methods.resetPasswordHandler=function(password,confirmPassword){
     this.resetTokenExpires=undefined;
 }
 
-const userModel=mongoose.model("NewUserModel",userSchema);
+const newUserModel=mongoose.model("NewUserModel",userSchema);
 
-module.exports=userModel;
+module.exports=newUserModel;

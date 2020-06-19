@@ -10,16 +10,16 @@ const {
 
 // planRouter.param("id", checkId);
 const { protectRoute,isAuthorized }=require("../controller/authController");
-planRouter.use(protectRoute);
-planRouter.use(isAuthorized(["admin","restaurantowner"]));
+// planRouter.use(protectRoute);
+// planRouter.use(isAuthorized(["admin","restaurantowner"]));
 planRouter
   .route("")
   .get(getAllPlans)
-  .post(createPlan);
+  .post(protectRoute,createPlan);
 
 planRouter
   .route("/:id")
   .get(getPlan)
-  .patch(updatePlan)
-  .delete(deletePlan);
+  .patch(protectRoute,updatePlan)
+  .delete(protectRoute,deletePlan);
 module.exports = planRouter;

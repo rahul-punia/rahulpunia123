@@ -19,4 +19,7 @@
             i.fas.fa-check.feature-icon
             |  #{plan.ratingsAverage}/10
     .plan-btn-container
-        a.btn-full.btn I'm hungry
+        if name
+          a.btn-full.btn(href="javascript:;",plan-id=`${plan["_id"]}`).payment I'm hungry
+        else
+          a.btn-full.btn(href="/login") I'm hungry

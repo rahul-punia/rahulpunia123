@@ -14,24 +14,6 @@ mongoose.connect(secrets.DB_LINK
     console.log(err);
 })
 
-//Define schema
-// let userSchema=new mongoose.Schema({
-//     name:String,
-//     email:String
-// })
-
-// //define Model
-// const userModel=mongoose.model("userModel",userSchema);
-
-// const newUser=new userModel({
-//     name:"Steve",
-//     email:"abc@gmail.com",
-//     phno:12345
-// })
-// //save call=>express server=>mongodb server
-// newUser.save().then(function(){console.log("A user is saved in demousermodels")}).catch(function(err){
-//     console.log(err);
-// });
 //define schema
 const planSchema=new mongoose.Schema({
     name:{
@@ -59,6 +41,31 @@ const planSchema=new mongoose.Schema({
 //schema compile in to model
 const newPlanModel=mongoose.model("newPlanModel",planSchema);
 module.exports=newPlanModel;
+
+
+
+
+
 // app.listen(3000,function(req,res){
 //     console.log("App is listening at port 3000");
 // })
+
+
+//Define schema
+// let userSchema=new mongoose.Schema({
+//     name:String,
+//     email:String
+// })
+
+// //define Model
+// const userModel=mongoose.model("userModel",userSchema);
+
+// const newUser=new userModel({
+//     name:"Steve",
+//     email:"abc@gmail.com",
+//     phno:12345
+// })
+// //save call=>express server=>mongodb server
+// newUser.save().then(function(){console.log("A user is saved in demousermodels")}).catch(function(err){
+//     console.log(err);
+// });

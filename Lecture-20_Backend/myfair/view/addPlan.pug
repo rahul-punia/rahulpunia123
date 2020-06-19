@@ -1,0 +1,28 @@
+extend base.pug
+block content
+  .addPlan-container
+    h2 ADD PLAN
+    .addPlan-Block
+      form.createPlan
+        label Plan name:
+        br
+        input(type='text').planName
+        br
+        label Plan price:
+        br
+        input(type='text').planPrice
+        br
+        label Plan AverageRating:
+        br
+        input(type='text').planRating
+        br
+        label Plan Discount:
+        br
+        input(type='text').planDiscount
+        br
+        label Duration:
+        br
+        input(type='text').planDuration
+        .entry-create
+            .btn-parent
+              button(type="submit").btn.btn-full.form-button CREATE PLAN

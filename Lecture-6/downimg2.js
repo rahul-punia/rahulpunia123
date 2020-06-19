@@ -13,12 +13,12 @@ function(res){
     res.on("end",function(){
         const json=JSON.parse(wholedata);
         // console.log(json);
-        const url=json.url;
+        const url=json.url;//. operator match literally
         // let img="";
-        //make another request inside callback function of end event of first request
-        // b/z we get URL of img to download after response of first request come
+        //make another request inside callback function of first request in end event
+        // b/z we get URL of img to download img. after response of first request come
         const anotherRequest=https.get(url,function(res){
-            res.pipe(imgstream);//res(respone) is a readableStream jise hum writeablestream(imgstream) mai dal rhe hai 
+            res.pipe(imgstream);//res(respone) work like readableStream jise hum writeablestream(imgstream) mai dal rhe hai 
             });
         anotherRequest.end();
     });

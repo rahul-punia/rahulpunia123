@@ -2,11 +2,12 @@ const input=document.querySelector("input");
 const button=document.querySelector("button");
 const ul=document.querySelector("ul");
 const form=document.querySelector("form");
-
+// localStorage.clear();
 (function getTaskFromLS(){
     if(localStorage.getItem("TaskList")!=null){
          const taskArr=JSON.parse(localStorage.getItem("TaskList"));
          for(let i=0;i<taskArr.length;i++){
+              console.log(taskArr[i]);
               addOneTask(taskArr[i]);
          }
     }
@@ -19,9 +20,9 @@ function addOneTask(task){
      <img src="./img/cross.png" alt="">`
      
      ul.appendChild(li);
+     //to remove task
      const img=li.querySelector("img")
      img.addEventListener("click",removeTask);
-   
 }
 
 form.addEventListener("submit",function(e){
@@ -32,8 +33,25 @@ form.addEventListener("submit",function(e){
      addOneTask(task);
      addTasktoLs(task);
      input.value="";
-     
 })
+
+function addTasktoLs(task){
+     if(localStorage.getItem("TaskList")==null){
+          const TaskList=[task];
+          localStorage.setItem("TaskList",JSON.stringify(TaskList));
+     }else{
+        const STaskList=localStorage.getItem("TaskList");
+        const TaskList=JSON.parse(STaskList); //convert in to an (js)object form
+        TaskList.push(task);
+        localStorage.setItem("TaskList",JSON.stringify(TaskList));
+     }
+}
+
+function removeTask(e){
+     const rtask=e.target.parentElement.firstChild.textContent;//parentElement is li
+     removeTaskFromLS(rtask.trim());//remove from local storage
+     e.target.parentElement.remove();//remove from screen
+}
 
 function removeTaskFromLS(task){
      if(localStorage.getItem("TaskList"==null)){
@@ -53,24 +71,6 @@ function removeTaskFromLS(task){
 }
 
 
-
-function addTasktoLs(task){
-     if(localStorage.getItem("TaskList")==null){
-          const TaskList=[task];
-          localStorage.setItem("TaskList",JSON.stringify(TaskList));
-     }else{
-        const STaskList=localStorage.getItem("TaskList");
-        const TaskList=JSON.parse(STaskList); //convert in to an object form
-        TaskList.push(task);
-        localStorage.setItem("TaskList",JSON.stringify(TaskList));
-     }
-}
-
-function removeTask(e){
-     const rtask=e.target.parentElement.firstChild.textContent;
-     removeTaskFromLS(rtask.trim());
-     e.target.parentElement.remove()
-}
 // const img=document.querySelector
 // img.addEventListener("click",removeTask);
 

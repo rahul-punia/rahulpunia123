@@ -1,8 +1,9 @@
 const http=require("http");
-const fs=require("fs");
+// const fs=require("fs");
 const userdata=require("./user.json");
 //request-http://localhost:4000/samantha
 const server=http.createServer(function(req,res){
+    // console.log(req.url);
     const Username=req.url.split("/").pop();
 
     for(var i=0;i<userdata.length;i++){

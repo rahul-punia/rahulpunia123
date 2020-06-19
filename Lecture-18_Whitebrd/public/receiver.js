@@ -1,3 +1,4 @@
+//for real time Board if more than 1 user
 let isemiitedMouse=false;
 socket.on("mymousedown",function(point){
     isemiitedMouse=true;

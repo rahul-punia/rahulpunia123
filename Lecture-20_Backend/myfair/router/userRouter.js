@@ -1,6 +1,7 @@
 const userRouter = require("express").Router();
+const multer=require("multer");
 const {signup,login,protectRoute,isAuthorized,forgetPassword,resetPassword}=require("../controller/authController");
-const {getUser,getAllUser,updateUser,deleteUser}=require("../controller/userController")
+const {getUser,getAllUser,updateUser,deleteUser,updateProfileImage}=require("../controller/userController")
 //////////////JSON///////////////////
 // const {
 //   getAllUser,
@@ -28,6 +29,37 @@ userRouter.patch("/resetPassword/:token",resetPassword);
 // profile page
 userRouter.use(protectRoute);
 userRouter.post("/getMe",getUser);
+
+// barebone
+// const upload = multer({ dest: "/public" });
+// dest multer
+//filter => images 
+const filter = function (req, file, cb) {
+    if (file.mimetype.startsWith("image")) {
+      cb(null, true)
+    } else {
+      cb(new Error("Not an Image! Please upload an image"), false)
+    }
+  }
+  //storageFilter => file=> jpg,destination
+  
+  const multerStorage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, "public/img/users/")
+    },
+    filename: function (req, file, cb) {
+      cb(null, `user-${Date.now()}.jpeg`)
+    }
+  })
+  // ram
+  
+  const upload = multer({
+    storage: multerStorage,
+    fileFilter: filter
+  })
+
+  //  mutipart data=> everything=> image  , naming , extension => put 
+userRouter.patch("/ProfileImage", upload.single("photo"), protectRoute, updateProfileImage);
 
 // isAuthorized
 // admin

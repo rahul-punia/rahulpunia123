@@ -9,7 +9,7 @@ const weather= await getWeather(city);  //give array
 const temp=Math.floor(weather[0]["the_temp"]);
 const state=weather[0]["weather_state_name"];
 console.log(`Current conditions in 
-${city} 
+        ${city} 
          ${temp} degree | ${state}`);
 // return data;
 }

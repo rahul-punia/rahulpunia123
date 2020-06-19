@@ -1,0 +1,24 @@
+extend base.pug
+block content
+    .userSignup-container
+        h2 Sign Up form
+        .userSignupblock-container
+            .userSignupEmail-block
+                h2 Hello, Friend!
+                form.userSignup
+                    label Name:
+                        br
+                        input(type='text').signup_name
+                    label Email:
+                        br
+                        input(type='text').signup_email
+                    label Password:
+                        br
+                        input(type='text').signup_password
+                    label Confirm Password:
+                        br
+                        input(type='text').signup_confirmPassword        
+                        .entry-create
+                        .btn-parent
+                            button(type="submit").btn.btn-full.form-button Create Account       
+            .userSignupImage-block

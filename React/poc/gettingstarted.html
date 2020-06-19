@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- !-- react actual algorithm -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <!-- Dom manipulation -->
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <!-- JSX syntax => JS  -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    function Hello(props){
+        return <h1>Hello{props.name} are you {props.age} old</h1>
+    } 
+
+    function HelloAll(){
+        return (<React.Fragment>
+            <Hello name="Ram" age="26"></Hello>
+            <Hello name="Rahul" age="20"></Hello>
+            <Hello name="Akahay" age="23"></Hello>
+            <Hello name="Neeraj" age="21"></Hello>
+            <Hello name="Shyam" age="26"></Hello>
+            </React.Fragment>)
+    }
+    ReactDOM.render(<HelloAll></HelloAll>,document.getElementById("root"));
+    </script>
+</body>
+</html>

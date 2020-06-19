@@ -1,0 +1,13 @@
+extend base.pug
+block content
+  .deletePlan-container
+    h2 Delete Plan
+    .deletePlan-block
+        form.deletePlan
+            label ENTER PLAN ID:
+            br
+            input(type='text').plan_id
+            .entry-create
+                .btn-parent
+                    button(type="submit").btn.btn-full.form-button DELETE PLAN
+    

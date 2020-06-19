@@ -443,6 +443,9 @@ margin-top: 0.8rem;
   .entry{
       width: 20vw;
   }
+  .entry a:hover{
+    border-bottom: 0.1rem solid red;
+  }
   .btn-parent{
       margin-top: 0.3rem;
       margin-left: 2.5rem;
@@ -461,30 +464,167 @@ margin-top: 0.8rem;
   /* Login template css */
   .profile-container{
       width: 100%;
-      height: 28rem;
-      background-color: greenyellow;
+      height: 30rem;
+      background-color: gainsboro;
       text-align: center;
       justify-content: center;
       font-size: 2rem;
   }
-
-
-
+  .profile-block{
+    background-color: gainsboro;
+    width: 30%;
+     height: 26rem;
+     margin-left: 35%;
+     margin-right: 35%;
+  }
+  .profile-block a:hover{
+    border-bottom: 0.1rem solid #e74c3c;
+  }
+  .profileImage{
+      height: 9rem;
+  }
+  .updateProfile{
+    /* height: 22px; */
+    /* width: 64px; */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin-left: 3rem;
+    background-color:gray;
+  }
+/* Manage Plan css */
   .manage-container{
       text-align: center;
-      height: 24rem;
+      height: 30rem;
       width: 100%;
       font-size: 1.5rem;
-      background-color: aqua;
+      background-color:black;
   }
-  .manage-block{
-      margin-top: 2rem;
-      background-color: teal;
-      width: 30%;
-        height: 24rem;
-        margin-left: 35%;
-        margin-right: 35%;
+  .manageBlock-container{
+      display: flex;
   }
-  .manage-block p{
+  .managePlan-block{
+        width: 30%;
+        height: 22rem;
+        margin-left: 5%;
+        /* margin-right: 35%; */
+  }
+  .manage-image{
       margin-top: 1rem;
+      margin-bottom: 2rem;
+      height: 27rem;
+      width: 55%;
+      margin-left: 8%;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../img/istockphoto-1149317276-1024x1024.jpg");
   }
+  .managePlan-block a:hover{
+      border-bottom: 0.1rem solid crimson;
+  }
+  .managePlan-block a{
+      color: white;
+  }
+  .managePlan-block p{
+    margin-top: 1rem;
+  }
+  .managePlan-block h2{
+    color: white;
+  }
+
+  /* Add Plan css */
+  .addPlan-container{
+      background-color:white;
+      height: 38rem;
+  }
+
+  .addPlan-Block{
+      margin-left: 8rem;
+  }
+
+
+  /* Delete Plan css */
+  .deletePlan-container{
+    background-color:white;
+    height: 20rem;
+}
+.deletePlan-block{
+    margin-left: 8rem;
+}
+
+
+/* Forget Password css */
+.forget-container{
+    background-color:black;
+    height: 35rem;
+    text-align: center;
+}
+.block-container{
+    display: flex;
+    height: 28rem;
+}
+.forgetEmail-block{
+    margin-top: 3rem;
+    text-align: left;
+    margin-left: 4rem;
+    width: 40%;
+}
+.forgetEmail-block button{
+    margin-top: 0.8rem;
+}
+.forgetImage-block{
+    margin-left: 10%;
+    width: 35%;
+    height: 90%;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("../img/forgetPassword.jpeg");
+ }
+
+
+ /* signup */
+ .userSignup-container{
+    background-color:black;
+    height: 38rem;
+    /* width: 100%; */
+    text-align: center;
+}
+.userSignupblock-container{
+    display: flex;
+    height: 28rem;
+}
+.userSignupEmail-block{
+    /* margin-top: 2rem; */
+    text-align: left;
+    margin-left: 8rem;
+    width: 40%;
+    height: 25rem;
+}
+.userSignupImage-block{
+    margin-top: 7rem;
+    margin-left: 10%;
+    width: 30%;
+    height: 70%;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("../img/signup.png");
+ }
+
+/* reset Password css */
+.reset-container{
+    background-color:black;
+    height: 35rem;
+    text-align: center;
+}
+.resetblock-container{
+    display: flex;
+    height: 28rem;
+}
+.resetEmail-block{
+    margin-top: 2rem;
+    text-align: left;
+    margin-left: 8rem;
+    width: 40%;
+}
+.resetImage-block{
+    /* color: aliceblue; */
+    margin-top: 3rem;
+    margin-left: 12%;
+    width: 27%;
+    height: 52%;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("../img/resetpwd2.jpg");
+ }

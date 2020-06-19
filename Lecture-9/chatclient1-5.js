@@ -7,14 +7,14 @@ const reader = readline.createInterface({
     output: process.stdout
   });
   var username="";
-  reader.question('Enter your name:', function(answer) {
+  reader.question('Enter your name:', function(name) {
     // TODO: Log the answer in a database
-    console.log(`Hello  ${answer}`);
-    username=answer;
+    console.log(`Hello  ${name}`);
+    username=name;
     var message={};
     message.type="joining";
-    message.username=username;
-    message.data=`${answer} has joined`;
+    message.username=name;
+    message.data=`${name} has joined`;
     socket.emit("Joined",message);
     // rl.close();
   });

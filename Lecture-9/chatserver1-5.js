@@ -17,13 +17,12 @@ socketserver.on("connect",function(socket){
     if(message.type=="private"){
     // sending to individual socketid (private message)
    socketserver.to(`${db[message.receiver]}`).emit("notice",message.data);
-      }else{
+      }else{//public
+     // sending to all clients except sender
         socket.broadcast.emit('notice',message.data);
     }
     
 });
-  // sending to all clients except sender
-
 });
 server.listen(3000,function(){
     console.log("server is listening at port 3000");

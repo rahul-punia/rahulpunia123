@@ -1,4 +1,5 @@
-module.exports=function help(){console.log(` weather [command] <options>
+module.exports=function help(){console.log(
+` weather [command] <options>
 
 today .............. show weather for today
 forecast ........... show 5-day weather forecast

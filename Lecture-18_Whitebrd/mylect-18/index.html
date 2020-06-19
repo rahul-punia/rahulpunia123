@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+      .mynavbar{
+          background-color: aquamarine;
+          text-align: center;
+      }
+      .img-tool{
+          display: inline;
+      }
+    </style>
+</head>
+<body>
+    <nav class="mynavbar">
+        <div class="img-tool" onclick="handletoolchange('pencil')">
+          <img src="../public/Icons/pencil.svg" width="50" height="50" alt="">
+        </div>
+        <div class="img-tool" onclick="handletoolchange('eraser')">
+        <img src="../public/Icons/eraser.svg" width="50" height="50" alt="">
+        </div>
+        <div class="img-tool">
+        <img src="../public/Icons/forwardSign.svg" width="50" height="50" alt="">
+       </div>
+       <div class="img-tool">
+       <img src="../public/Icons/Backsigns.svg" width="50" height="50" alt="">
+       </div>
+       <div class="img-tool">
+       <img src="../public/Icons/zoom_in.png" width="50" height="50" alt="">
+        </div>
+        <div class="img-tool">
+        <img src="../public/Icons/zoom_out.png" width="50" height="50" alt="">
+        </div>
+        </nav>
+    <canvas id="canvas" height="350" width="950"></canvas>
+    <script src="canvas.js"></script>
+</body>
+</html>

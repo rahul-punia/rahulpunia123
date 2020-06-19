@@ -2,6 +2,9 @@
 const userModel=require("../model/userModel");
 const secrets=require("../config/secrets");
 const jwt=require("jsonwebtoken");
+const emailHelper = require("../utility/sendEmail");
+
+
 async function signup(req,res){
   try{
     const user=await userModel.create(req.body); //create user
@@ -162,7 +165,18 @@ async function forgetPassword(req,res){
       if(user){
        const resetToken=user.createResetToken();//get new token create in usermodel
       const resetPath="http://localhost:3000/api/users/resetPassword/"+resetToken;
-       await user.save({validateBeforeSave:false});//save in db and stop run of validator
+      await user.save({validateBeforeSave:false});//save in db and stop run of validator
+
+      //send token on email
+      let html=`<h1>"Token":${resetToken}</h1>`, subject="Reset Password";
+      
+      let options = {
+        to: user.email,
+        html,
+        subject: subject,
+        text:resetPath
+      }
+      await emailHelper(options);
       //email changes   
        res.status(200).json({
          resetPath,
@@ -194,7 +208,7 @@ async function resetPassword(req,res){
      //save in db
     await user.save();
     res.status(200).json({
-      status:"Password reset"
+      status:"Password reseted successfully"
     })
     }else{
       throw new Error("Not a Valid Token")

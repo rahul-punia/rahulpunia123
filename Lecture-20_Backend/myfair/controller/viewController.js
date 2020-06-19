@@ -45,9 +45,53 @@ async function logout(req,res){
     })
 }
 async function managePlans(req,res){
-    res.render("managePlan.pug",{
-        title:"ManagePlans"
+    const user=await userModel.findById(req.id);
+    const name=req.userName;
+     res.render("managePlan.pug",{
+        title:"ManagePlans",user,name
     })
+}
+
+async function createPlan(req,res){
+    const user=await userModel.findById(req.id);
+    const name=req.userName;
+     res.render("addPlan.pug",{
+        title:"Add Plan",user,name
+    })
+}
+
+async function deletePlan(req,res){
+    const user=await userModel.findById(req.id);
+    const name=req.userName;
+     res.render("deletePlan.pug",{
+        title:"Delete Plan",user,name
+    })
+}
+
+async function updatePlan(req,res){
+    const user=await userModel.findById(req.id);
+    const name=req.userName;
+     res.render("updatePlan.pug",{
+        title:"Delete Plan",user,name
+    })
+}
+
+async function forgetPassword(req,res){
+    const user=await userModel.findById(req.id);
+    const name=req.userName;
+     res.render("forgetPassword.pug",{
+        title:"Delete Plan",user,name
+    })
+}
+async function resetPassword(req,res){
+    res.render("resetPassword.pug",{
+        title:"resetPassword"
+    })
+}
+async function signupPage(req,res){
+     res.render("signupPage.pug",{
+         title:"signup"
+     })
 }
 
 
@@ -57,5 +101,10 @@ module.exports.getPlansPage=getPlansPage;
 module.exports.getLoginPage=getLoginPage;
 module.exports.getProfilePage=getProfilePage;
 module.exports.logout=logout;
-
 module.exports.managePlans=managePlans;
+module.exports.createPlan=createPlan;
+module.exports.deletePlan=deletePlan;
+module.exports.updatePlan=updatePlan;
+module.exports.forgetPassword=forgetPassword;
+module.exports.resetPassword=resetPassword;
+module.exports.signupPage=signupPage;

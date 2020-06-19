@@ -1,0 +1,28 @@
+extend base.pug
+block content
+  .addPlan-container
+    h2 UPDATE PLAN
+    .addPlan-Block
+      form.createPlan
+        label Update Plan name:
+        br
+        input(type='text').planName
+        br
+        label Update Plan price:
+        br
+        input(type='text').planPrice
+        br
+        label Update Plan AverageRating:
+        br
+        input(type='text').planRating
+        br
+        label Update Plan Discount:
+        br
+        input(type='text').planDiscount
+        br
+        label Update Plan Duration:
+        br
+        input(type='text').planDuration
+        .entry-create
+            .btn-parent
+              button(type="submit").btn.btn-full.form-button UPDATE PLAN
