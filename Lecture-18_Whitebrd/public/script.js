@@ -55,7 +55,7 @@ function handleToolChange(tool) {
             ctx.globalCompositeOperation="destination-out";
             Activetool = "eraser";
             pencilOptions.classList.remove("show");
-            // ctx.strokeStyle = "white";
+            ctx.strokeStyle = "white";
             // remove other options
             // set yourself active
             // change style

@@ -1,4 +1,5 @@
 let parent;
+
 function createSticky(){
 const body = document.querySelector("body");
 
@@ -16,8 +17,9 @@ writingPad.setAttribute("class", "writingPad")
 close.setAttribute("class","colors");
 minimize.setAttribute("class","colors");
 textarea.setAttribute("class","textarea");
-minimize.classList.add("minimize");
 close.classList.add("close");
+minimize.classList.add("minimize");
+
 StickyPad.appendChild(navbar);
 StickyPad.appendChild(writingPad);
 navbar.appendChild(close);
