@@ -1,0 +1,23 @@
+extend base.pug
+block content
+    section.signup
+        h2 TRACK COMPLAINT STATUS
+        .signup-container
+            .signup-form
+                form(action='').complaint_Status
+                    .entry-container
+                        label(for='name') Name
+                        input#name(type='text' placeholder='Your Name').CName
+                    .entry-container
+                        label(for='email') Email
+                        input#Email(type='email' placeholder='Your Email').CEmail
+                    .entry-container
+                        label(for='contact number') Contact Number
+                        input#name(type='text' placeholder='Your Contact Number').CCN
+                    .entry-container
+                        label(for='COMPLAINT NUMBER') COMPLAINT NUMBER
+                        input#name(type='text' placeholder='COMPLAINT NUMBER').CN
+                    .entry-container-checkbox
+                        input(type='checkbox')
+                        p I have read and agree with all the Privacy Policy and Terms Conditions
+                    button.btn.btn-full(type='submit') submit

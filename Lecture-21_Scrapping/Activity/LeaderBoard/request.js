@@ -1,7 +1,7 @@
 let request=require("request");
 let cheerio=require("cheerio");
 let fs=require("fs");
-let eachMatchHandler=require("./match");
+let eachMatchHandler=require("./getLeaderBoard");
 request("https://www.espncricinfo.com/series/_/id/8039/season/2015/icc-cricket-world-cup",dataReceiver);
 
 function dataReceiver(err,res,html){
@@ -47,7 +47,7 @@ function parseMatch(html){
     //in full Page
     let allCards=$(".col-md-8.col-16");
     // console.log("allCard.html",allCards);
-    fs.writeFileSync("allCard.html",allCards);
+    // fs.writeFileSync("allCard.html",allCards);
 
     for(let i=0;i<allCards.length;i++){
         // let details=$(allCards[i]).find(".small.mb-0.match-description").text();
@@ -62,8 +62,4 @@ function parseMatch(html){
         eachMatchHandler("https://www.espncricinfo.com" + scoreCardLink);
     }
 }
-
-
-
-
 

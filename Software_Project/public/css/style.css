@@ -1,0 +1,642 @@
+/* basic resets */
+/* universal selector */
+*{
+    color:gray;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+    html{
+        font-size: 1.2rem;
+    }
+    a{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+    .showcase{
+        background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../img/ReviewImg.jpg");
+        height: 100vh;
+        background-size: 100vw;
+        background-position: centre;
+        text-transform: uppercase;
+    }
+       .text-box{
+           position: absolute;
+           top: 34vh;
+           left: 17vw;
+           font-size: 140%;
+           width: 42vw;
+       }
+       .main-heading{
+         color: white;
+         /* font-family: 'Roboto Slab', serif; */
+         line-height: 170%;
+       }
+     .nav-ul{
+         display: flex;
+         justify-content: flex-end;
+     }
+     .span-styler{
+         color: crimson;
+     }
+   
+     .sticky {
+        position: fixed;
+        height: 3.5rem;
+        width: 100%;
+        background-color: white;
+        padding-bottom: 1rem;
+        /* layers=> z inc nearer to user  */
+        z-index: 1;
+      }
+      .sticky .nav-links {
+        color: grey;
+      }
+
+     .nav-links{
+         color: white;
+     }
+     .nav-li{
+         margin-right: 1rem;
+         padding-top: 1rem;
+         padding-bottom:0.8rem;
+         font-size: 110%;
+     }
+     .nav-li:hover {
+        border-bottom: 0.1rem solid #e74c3c;
+      }
+      .btn {
+          /* margin-top:5rem; */
+          display: inline-block;
+        color: white;
+        font-size: 65%;
+        padding: 0.8rem;
+        background-color: #e74c3c;
+        border-radius: 1.7rem;
+        border:0.2rem solid #e74c3c;
+        margin: 0.5rem;
+    }
+    .btn:hover{
+        transform: scale(1.2);
+    }
+    
+    .btn-empty{
+        background-color: transparent;
+        color: crimson;
+    }
+       .btn-empty:hover{
+        background-color: #e74c3c;
+        color: white;
+    } 
+    .btns-container{
+        margin-top: 1.3rem;
+    }
+    /* IMPORTANT */
+    section{
+        padding:4rem 5rem;
+      }
+  h2{
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 2rem;
+  }
+  h2::after{
+    content: "";
+    height: 0.2rem;
+    width: 10rem;
+    background-color: crimson;
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+  }
+  .feature-heading{
+    font-size: 160%;
+    margin-bottom: 1rem;
+    font-weight:300;
+  }
+
+  /* ICONS */
+  .icon{
+      display: block;
+      color: crimson;
+      font-size: 280%;
+      margin-bottom: 1rem;;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* FEATURE-SECTION */
+  
+  .container-parent {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .container {
+    width: 28%;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    transition: transform 0.4s;
+  }
+
+  /* .container-parent{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+  /* content => next  */
+  /* flex-wrap: wrap; */
+   /* } */ */
+
+  /* .container{
+      margin-right: 1.5rem;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+      transition: transform 0.4s;
+  } */
+  .feature-para{
+    font-size: 120%;
+    line-height: 145%;
+    text-align: justify;
+  }
+      
+ .container:hover{
+    transform: scale(1.1);
+  }
+   
+
+/* steps to follow */
+.steps{
+    background-color:rgba(169, 169, 169, 0.493);
+}
+  .flex-container{
+      display: flex;
+  }
+
+  .image-container{
+      width: 42vw;
+      text-align: center;
+  }
+  .apps-img{
+      width: 15vw;
+      /* height: 30rem; */
+  }
+  .steps-container{
+      margin: 2rem;
+  }
+  .steps-flex-container{
+      height: 28%; ;
+  }
+  .steps-flex-container p{
+      padding-top: 0.8rem;
+  }
+  .steps-flex-container div{
+      float: left;
+      padding: 0.8rem 1.2rem;
+      border: 2px solid crimson;
+      border-radius: 50%;
+      margin-right: 1.5rem;
+      font-size: 220%;
+  }
+
+  clearfix::after{
+      content: "";
+      clear: both;
+      display: table;
+  }
+
+
+
+  .footer-text{
+    color: white;
+    font-size: 1.5rem;
+    background-color: black;
+    height: 12rem;
+}
+.upper{
+  display: flex;
+  text-align: end;
+}
+.apps{
+    color: white;
+    margin: 1rem;
+}
+.ICONS{
+    margin-left: 9rem;
+}
+.foot-icon{
+  color: white;
+  text-align: right;
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+.footer-heading{
+    color: white;
+    margin-left: 6rem;
+    /* margin-top: 0.2rem; */
+}
+
+
+
+/* Reviews */
+.review{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),url("../img/showcasebackground.jpg");
+        /* height: 100vh; */
+        background-size: 100vw;
+        background-position: centre;
+        
+}
+.rflex-container{
+    display: flex;
+    text-align: center;
+}
+.review-container{
+    background-color: gainsboro;
+    margin: 3.2rem;
+    width: 20rem;
+    /* height: 0rem; */
+    /* margin: 1.5rem; */
+}
+.review-container h3{
+ margin: 1rem;
+ color: black;
+}
+.review-container p{
+    margin: 1rem;
+}
+.review-container i{
+    color: crimson;
+    margin: 0.5rem;
+}
+
+
+/* PLANS */
+.Plans{
+    background-color: rgb(220, 220, 220);
+}
+.plan-parent{
+    display: flex;
+    
+}
+.plan-child{
+    text-align: center;
+    height: 21rem;
+    width: 20%;
+    border: 2px solid red;
+    border-radius: 1rem;
+    margin: 4rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+.plan-header{
+    height: 40%;
+    /* background-color: aqua; */
+    border-bottom:2px solid #e74c3c;
+    border-width: 50%;
+    text-align: center;
+}
+.plan-feature{
+    height: 45%;
+    /* background-color: yellowgreen; */
+    border-bottom:2px solid #e74c3c;
+    text-align: left;
+}
+.plan-btn-container a{
+    margin-top: 1rem;
+    font-size: 85%;
+     background-color: red;
+}
+.plan-btn-container{
+    height: 15%;
+}
+.styling-span{
+    color: crimson;
+    font-size: 2.5rem;
+}
+.plan-header h3{
+margin-top: 0.8rem;
+}
+ 
+.feature-icon{
+ color: #e74c3c;
+ margin: 0.5rem;
+}
+
+/* .plans{
+    background-color: #80808048;
+}
+
+
+.plans-container{
+    display: flex;
+}
+
+.plans-cont{
+    text-align: center;
+    margin: 6rem;
+    background-color: gainsboro;
+    width: 15rem;
+    height: 20rem;
+    border: 1px solid red;
+    border-radius: 5%;
+}
+
+.plans-cont h4{
+    display: flex;
+}
+  
+.inside{
+    display: flex;
+    justify-content: center;
+}
+
+.inside h3{
+    font-size: xx-large;
+    color: red;
+}
+.inside h4{
+    margin-top: 1rem;
+} */
+
+
+ /* Signup-form */
+ .signup{
+     background-color: rgba(128, 128, 128, 0.438);
+ }
+ .bg-video{
+     width: 30vw;
+ }
+
+ .signup-container{
+     display: flex;
+ }
+ .signup-form{
+    width: 50vw;
+    margin-left:15rem;
+ }
+
+ input,select,textarea{
+     width: 80%;
+     display: block;
+ }
+
+ input[type="text"],
+ select{
+     padding: 1rem;
+ }
+
+ .entry-container-checkbox{
+    display:flex;
+}
+
+ input[type="checkbox"]{
+     margin-top:0.2rem;
+     width: 1.5rem;
+     height: 1rem;
+  }
+
+ input[type="submit"],
+ select{
+     display: inline-block;
+     /* text-align: center; */
+ }
+
+
+
+
+ /* Login Form css */
+ .form-container {
+    background: lightgrey;
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .form-block{
+      margin-top: 4rem;
+  }
+  .user-icon{
+      color: black;
+      font-size: 6rem;
+      margin-left: 3rem;
+      margin-bottom: 2rem;
+  }
+  .entry{
+      width: 20vw;
+  }
+  .entry a:hover{
+    border-bottom: 0.1rem solid red;
+  }
+  .btn-parent{
+      margin-top: 0.3rem;
+      margin-left: 2.5rem;
+  }
+  .entry-text{
+      font-size: 1.2rem;
+  }
+  .email{
+      font-size: 1rem;
+  }
+  .password{
+      font-size: 1rem;
+  }
+
+
+  /* Login template css */
+  .profile-container{
+      width: 100%;
+      height: 30rem;
+      background-color: gainsboro;
+      text-align: center;
+      justify-content: center;
+      font-size: 2rem;
+  }
+  .profile-block{
+    background-color: gainsboro;
+    width: 30%;
+     height: 26rem;
+     margin-left: 35%;
+     margin-right: 35%;
+  }
+  .profile-block a:hover{
+    border-bottom: 0.1rem solid #e74c3c;
+  }
+  .profileImage{
+      height: 9rem;
+  }
+  .updateProfile{
+    /* height: 22px; */
+    /* width: 64px; */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin-left: 3rem;
+    background-color:gray;
+  }
+/* Manage Plan css */
+  .manage-container{
+      text-align: center;
+      height: 30rem;
+      width: 100%;
+      font-size: 1.5rem;
+      background-color:black;
+  }
+  .manageBlock-container{
+      display: flex;
+  }
+  .managePlan-block{
+        width: 30%;
+        height: 22rem;
+        margin-left: 5%;
+        /* margin-right: 35%; */
+  }
+  .manage-image{
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      height: 27rem;
+      width: 55%;
+      margin-left: 8%;
+    background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../img/istockphoto-1149317276-1024x1024.jpg");
+  }
+  .managePlan-block a:hover{
+      border-bottom: 0.1rem solid crimson;
+  }
+  .managePlan-block a{
+      color: white;
+  }
+  .managePlan-block p{
+    margin-top: 1rem;
+  }
+  .managePlan-block h2{
+    color: white;
+  }
+
+  /* Add Plan css */
+  .addPlan-container{
+      background-color:white;
+      height: 38rem;
+  }
+
+  .addPlan-Block{
+      margin-left: 8rem;
+  }
+
+
+  /* Delete Plan css */
+  .deletePlan-container{
+    background-color:white;
+    height: 20rem;
+}
+.deletePlan-block{
+    margin-left: 8rem;
+}
+
+
+/* Forget Password css */
+.forget-container{
+    background-color:black;
+    height: 35rem;
+    text-align: center;
+}
+.block-container{
+    display: flex;
+    height: 28rem;
+}
+.forgetEmail-block{
+    margin-top: 3rem;
+    text-align: left;
+    margin-left: 4rem;
+    width: 40%;
+}
+.forgetEmail-block button{
+    margin-top: 0.8rem;
+}
+.forgetImage-block{
+    margin-left: 10%;
+    width: 35%;
+    height: 90%;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("../img/forgetPassword.jpeg");
+ }
+
+
+ /* signup */
+ .userSignup-container{
+    background-color:black;
+    height: 38rem;
+    /* width: 100%; */
+    text-align: center;
+}
+.userSignupblock-container{
+    display: flex;
+    height: 28rem;
+}
+.userSignupEmail-block{
+    /* margin-top: 2rem; */
+    text-align: left;
+    margin-left: 8rem;
+    width: 40%;
+    height: 25rem;
+}
+.userSignupImage-block{
+    margin-top: 7rem;
+    margin-left: 10%;
+    width: 30%;
+    height: 70%;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("../img/signup.png");
+ }
+
+/* reset Password css */
+.reset-container{
+    background-color:black;
+    height: 35rem;
+    text-align: center;
+}
+.resetblock-container{
+    display: flex;
+    height: 28rem;
+}
+.resetEmail-block{
+    margin-top: 2rem;
+    text-align: left;
+    margin-left: 8rem;
+    width: 40%;
+}
+.resetImage-block{
+    /* color: aliceblue; */
+    margin-top: 3rem;
+    margin-left: 12%;
+    width: 27%;
+    height: 52%;
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("../img/resetpwd2.jpg");
+ }
+
+ .image-container{
+    width: 100%;
+    height: 100%;
+ }
+
+ .apps-img1{
+     width: 50%;
+     height: 50%;
+ }
+
+ 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+    <div id="root"></div>
+    <script type="text/babel">
+//The life cycle of React.js and React Native are the same. Life cycle methods are as follows:
+    
+// Initialization is the phase where the developer has to define the initial states and props of the 
+//React component. This is generally done in the constructors
+// Mounting is the phase where the initialization of the component is completed. The component is 
+//mounted on the DOM and rendered for the first time on the webpage. The two mounting methods of React are “componentWillMount()” and “componentDidMount()”.
+
+// Updation is a JS library that helps create Active web pages easily. Active web pages are those 
+//specific pages which behave according to its user. It reflects changes in the value of state or props 
+//according to the user's behavior. The main Updation methods are “componentWillReceiveProps()”,“componentWillUpdate()”
+//,“componentDidUpdate()”,  and “setState()”.
+
+// Unmounting is the phase of the lifecycle of the component where unmounting from component happens. 
+//“componentWillUnmount()” is the method used in Unmounting.
+    class Counter extends React.Component{
+        constructor(){
+            super();  //call parent constructor to inherit all properties
+            this.state={
+                count: 0
+            }
+        }
+        increment=()=>{
+            this.setState({count:this.state.count+1})
+        }
+        decrement=()=>{
+            this.setState({count:this.state.count-1})
+        }
+        render(){
+            return(
+                <React.Fragment>
+                    <p>{this.state.count}</p>
+                    <button className="btn btn-primary" onClick={this.increment}>+</button>
+                    <button className="btn btn-danger" onClick={this.decrement}>-</button>
+                    </React.Fragment>
+            )
+        }
+    }
+
+    // Component are reusable
+    function Counters(){
+        return (
+            <React.Fragment>   
+                <Counter></Counter>
+                <Counter></Counter>
+                <Counter></Counter>
+                <Counter></Counter>
+                </React.Fragment>
+        )
+    }
+
+    ReactDOM.render(<Counters></Counters>,document.getElementById("root"));
+    </script>
+    </div>
+</body>
+</html>

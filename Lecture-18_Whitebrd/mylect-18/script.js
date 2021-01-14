@@ -1,30 +1,64 @@
-const canvas=document.getElementById("canvas");
-const ctx=canvas.getContext("2d");
-// ctx.fillStyle="red";
-// ctx.fillRect(10,10,350,350);
+const board=document.getElementById("canvas");
+const ctx=board.getContext("2d");//object to render changes on canvas(board)
+// const createSticky=require("./sticky");
 
+var isMouseDown=false;
 
-    // ctx.fillRect(25, 25, 100, 100);
-    // ctx.clearRect(45, 45, 60, 60);
-    // ctx.strokeRect(50, 50, 50, 50);
+board.height=window.innerHeight;
+board.width=window.innerWidth;
+ctx.lineWidth="5";
 
-    ctx.lineWidth=5;
-    ctx.beginPath();
-    ctx.moveTo(75,50);
-    ctx.lineTo(200,75); //(w,h)
-    // ctx.lineTo(100, 25);
-    //set line color
-    ctx.strokeStyle="red";
+const pencilOptions = document.querySelector(".pencil");
+const eraserOptions = document.querySelector(".eraser");
+// const stickyOptions = document.querySelector(".sticky");
+
+function handletoolchange(tool){
+  if(tool=='pencil'){
+    console.log("pencil");
+    eraserOptions.classList.remove("show");//remove class
+    // stickyOptions.classList.remove("show");//remove class
+    pencilOptions.classList.add("show");//add class
+    ctx.strokeStyle="orange";
+  }else if(tool=="eraser"){
+    console.log("eraser");
+    pencilOptions.classList.remove("show");//add class
+    // stickyOptions.classList.remove("show");//remove class
+    eraserOptions.classList.add("show");//remove class
+    ctx.strokeStyle="white";
+  }else if(tool=="sticky"){
+    console.log("sticky");
+    eraserOptions.classList.remove("show");//remove class
+    pencilOptions.classList.remove("show");//add class
+    // stickyOptions.classList.add("show");//remove class
+    // ctx.strokeStyle="white";
+    createSticky();
+  }else{
+    // stickyOptions.classList.remove("show");//remove class
+    eraserOptions.classList.remove("show");
+    pencilOptions.classList.remove("show");
+  }
+}
+
+board.addEventListener("mousedown",function(e){
+  ctx.beginPath();
+  const x=e.clientX;
+  const y=e.clientY;
+  console.log(x+" "+y);
+  ctx.moveTo(x,y);
+ isMouseDown=true;
+})
+
+board.addEventListener("mousemove",function(e){
+    if(isMouseDown){
+    const x=e.clientX;
+    const y=e.clientY;
+  console.log(x+" "+y);
+    ctx.lineTo(x,y);
+    // ctx.strokeStyle="red";
     ctx.stroke();
-    // ctx.fill();
+    }
+})
 
-
-    // ctx.beginPath();
-    // ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
-    // ctx.moveTo(110, 75);
-    // ctx.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
-    // ctx.moveTo(65, 65);
-    // ctx.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
-    // ctx.moveTo(95, 65);
-    // ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
-    // ctx.stroke();
+board.addEventListener("mouseup",function(){
+    isMouseDown=false;
+})

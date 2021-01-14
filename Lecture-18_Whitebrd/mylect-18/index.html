@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <!-- <style>
         *{
             margin: 0;
             padding: 0;
@@ -16,30 +16,63 @@
       .img-tool{
           display: inline;
       }
-    </style>
+    </style> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="mynavbar">
-        <div class="img-tool" onclick="handletoolchange('pencil')">
-          <img src="../public/Icons/pencil.svg" width="50" height="50" alt="">
-        </div>
-        <div class="img-tool" onclick="handletoolchange('eraser')">
-        <img src="../public/Icons/eraser.svg" width="50" height="50" alt="">
+        <div class="img-tool">
+          <img src="../public/Icons/pencil.svg" onclick="handletoolchange('pencil')"  alt="">
+          <div class="tool-options pencil">
+              <div class="pencil-size-option">
+                  <input type="range" id="pencil-size" min="5" max="30">
+              </div>
+              <div class="pencil-color-option">
+                <div class="symbol red"></div>
+                <div class="symbol green"></div>
+                <div class="symbol blue"></div>
+                <div class="symbol black"></div>
+             </div>
+          </div>
         </div>
         <div class="img-tool">
-        <img src="../public/Icons/forwardSign.svg" width="50" height="50" alt="">
-       </div>
-       <div class="img-tool">
-       <img src="../public/Icons/Backsigns.svg" width="50" height="50" alt="">
-       </div>
-       <div class="img-tool">
-       <img src="../public/Icons/zoom_in.png" width="50" height="50" alt="">
+        <img src="../public/Icons/eraser.svg" onclick="handletoolchange('eraser')" alt="">
+        <div class="tool-options eraser">
+            <div class="eraser-size">
+                <input type="range" id="eraser-size" min="5" max="30">
+            </div>
+        </div>
         </div>
         <div class="img-tool">
-        <img src="../public/Icons/zoom_out.png" width="50" height="50" alt="">
+            <img src="../public/Icons/stickyNote.svg" onclick="handletoolchange('sticky')" alt="">
+            <!-- <div class="sticky-cont  sticky">
+                <div class="sticky-bar"></div>
+            </div> -->
+        </div>
+        <div class="img-tool">
+           <input type="file" accept="file_extension|image/*" class="image-upload hidden">
+           <img src="../public/Icons/imageupload.svg" id="img-picker" alt="">
+           </div>
+           <div class="img-tool">
+            <img src="../public/Icons/DownloadSym.svg"  id="img-down" alt="">
+           </div>
+        <div class="img-tool">
+        <img src="../public/Icons/forwardSign.svg" onclick="handletoolchange('forward')" alt="">
+       </div>
+       <div class="img-tool">
+       <img src="../public/Icons/Backsigns.svg" onclick="handletoolchange('backward')">
+       </div>
+       <div class="img-tool">
+       <img src="../public/Icons/zoom_in.png" onclick="handletoolchange('zoom_in')">
+        </div>
+        <div class="img-tool">
+        <img src="../public/Icons/zoom_out.png" onclick="handletoolchange('zoom_out')">
         </div>
         </nav>
     <canvas id="canvas" height="350" width="950"></canvas>
-    <script src="canvas.js"></script>
+    <script src="script.js"></script>
+    <script src="sticky.js"></script>
+    <script src="upload.js"></script>
+    <script src="download.js"></script>
 </body>
 </html>

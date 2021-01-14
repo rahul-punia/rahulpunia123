@@ -1,0 +1,52 @@
+extend base.pug
+block content
+    section.signup
+        h2 REGISTER COMPLAINT
+        .signup-container
+            .signup-form
+                form(action='').registerComplaint
+                    .entry-container
+                        label(for='name') Name
+                        input#name(type='text' placeholder='Your Name').RC_Name
+                    .entry-container
+                        label(for='email') Email
+                        input#Email(type='email' placeholder='Your Email').RC_Email
+                    .entry-container
+                        label(for='name') Contact Number
+                        input#name(type='text' placeholder='Your Contact Number').RC_CN
+                    .entry-container
+                        label(for='name') Date of Complaint
+                        input#name(type='text' placeholder='Date of Complaint').RC_DOC
+                    .entry-container
+                        label(for='Options') Select your Zone
+                        select(name='').RC_SYZ
+                            option(value='Select zone') Select zone
+                            option(value='Narala zone') Narala zone
+                            option(value='Civil Line zone') Civil Line zone
+                            option(value='Karol Bagh zone') Karol Bagh zone
+                            option(value='Rohini zone') Rohini zone
+                            option(value='other') other
+                    .entry-container
+                        label(for='Options') Select Broad Category
+                        select(name='').RC_SBC
+                            option(value='Select Broad Category') Select Broad Category
+                            option(value='Garbage dumps on Road') Garbage dumps on Road
+                            option(value='Burning of Garbage') Burning of Garbage
+                            option(value='Public Toilet/Water less urinal Complaint') Public Toilet/Water less urinal Complaint 
+                            option(value='Vehicle Pollution') Vehicle Pollution
+                            option(value='Stray dogs') Stray dogs
+                            option(value='Industrial Pollution') Industrial Pollution
+                            option(value='Unauthorized Construction') Unauthorized Construction
+                            option(value='Water Logging') Water Logging
+                            option(value='other') other
+                    .entry-container
+                        label(for='feedback') Complaint / Suggestion Details-
+                        textarea(name='feedback' id='' cols='30' rows='10').RC_CDetails
+                    .entry-container
+                        label(for='name') Complaint Address-
+                        input#name(type='text' placeholder='Address').RC_Address
+                    .entry-container-checkbox
+                        input#checkbox(type='checkbox')
+                        p I have read and agree with all the Privacy Policy and Terms Conditions
+                        // <label for="checkbox">I have read and agree with all the Privacy Policy and Terms Conditions</label>
+                    button.btn.btn-full(type='submit') submit

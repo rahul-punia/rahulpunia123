@@ -1,0 +1,43 @@
+extends base
+block content
+  .form-container
+    form(style="top:0rem").login
+      .form-block
+        .user-image
+            i.fas.fa-user.user-icon
+        .entry
+            .entry-text Email
+            input(type='email').email
+        .entry
+            .entry-text Password
+            input(type='password').password
+            a(href="/forgetPassword",style="color:red") forget password?
+        .entry
+            .btn-parent
+              button(type="submit").btn.btn-full.form-button LOGIN
+
+
+
+
+
+
+
+
+
+
+//- extends base
+//- block content
+//-   .form-container
+//-     .form-block
+//-       form(style="top:0rem").login
+//-       .user-image
+//-         i.fas.fa-user.user-icon
+//-       .entry
+//-         .entry-text Email
+//-         input(type='email').email
+//-       .entry
+//-         .entry-text Password
+//-           input(type='password').password
+//-       .entry
+//-         .btn-parent
+//-           button(type="submit").btn.btn-full.form-button LOGIN
